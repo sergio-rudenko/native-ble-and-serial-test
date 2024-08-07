@@ -1,0 +1,7 @@
+{
+  "name": "network-access-controller-2wigand-client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

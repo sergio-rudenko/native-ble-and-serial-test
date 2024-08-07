@@ -1,0 +1,31 @@
+{
+  "name": "nskud-sprut-key-manager-client",
+  "private": true,
+  "version": "1.0.3",
+  "description": "Bastion SKUD SPRUT Key manager",
+  "main": "build/src/index.js",
+  "scripts": {
+    "build": "tsc && electron-rebuild",
+    "start-live": "node ./live-runner.js",
+    "start": "npm run build && NODE_ENV=development electron --inspect=5858 ./",
+    "pack": "npm run build && electron-builder build --dir -c ./electron-builder.config.js",
+    "build:windows": "npm run build && electron-builder --win --x64 -c ./electron-builder.config.js",
+    "build:linux": "npm run build && electron-builder --linux -c ./electron-builder.config.js"
+  },
+  "dependencies": {
+    "@abandonware/noble": "^1.9.2-25",
+    "@capacitor-community/electron": "^5.0.0",
+    "chokidar": "~3.5.3",
+    "electron-is-dev": "~2.0.0",
+    "electron-serve": "~1.1.0",
+    "electron-unhandled": "~4.0.1",
+    "electron-updater": "^5.3.0",
+    "electron-window-state": "^5.0.3"
+  },
+  "devDependencies": {
+    "electron": "^27.1.0",
+    "electron-builder": "^24.6.4",
+    "electron-rebuild": "^3.2.9",
+    "typescript": "^5.0.4"
+  }
+}
